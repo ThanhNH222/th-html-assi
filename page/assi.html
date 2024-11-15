@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký Thông tin Người dùng</title>
+    <link rel = "stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logoToan.png" alt="Logo">
+        </div>
+        <div class="slogan">Toán học là ngôn ngữ của vũ trụ</div>
+        <div class="banner">
+            <img src="../img/banner3.jpg" alt="Banner">
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container" id="form-container">
+            <h2>Đăng ký thông tin người dùng:</h2>
+            <form id="registrationForm" novalidate>
+                
+                <div class="form-group">
+                    <label for="fullName">Họ và tên<span style="color: red;"> *</span></label>
+                    <input type="text" id="fullName" name="fullName" maxlength="50" required>
+                    <div class="error" id="fullNameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email<span style="color: red;"> *</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone<span style="color: red;"> *</span></label>
+                    <input type="text" id="phone" name="phone" required>
+                    <div class="error" id="phoneError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Giới tính<span style="color: red;"> *</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Nam" required> Nam</label>
+                        <label><input type="radio" name="gender" value="Nữ" required> Nữ</label>
+                        <label><input type="radio" name="gender" value="Khác" required> Khác</label>
+                    </div>
+                    <div class="error" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Sở thích</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="Thể thao"> Thể thao</label>
+                        <label><input type="checkbox" name="hobbies" value="Phim ảnh"> Phim ảnh</label>
+                        <label><input type="checkbox" name="hobbies" value="Đọc sách"> Đọc sách</label>
+                        <label><input type="checkbox" name="hobbies" value="Âm nhạc"> Âm nhạc</label>
+                        <label><input type="checkbox" name="hobbies" value="Khác"> Khác</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="about">Giới thiệu bản thân</label>
+                    <textarea id="about" name="about" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Đăng ký</button>
+            </form>
+        </div>
+
+        <div class="user-info" id="userInfo">
+            <h2>Thông tin người dùng</h2>
+            <p><strong>Họ và tên:</strong> <span id="displayFullName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Giới tính:</strong> <span id="displayGender"></span></p>
+            <p><strong>Sở thích:</strong> <span id="displayHobbies"></span></p>
+            <p><strong>Giới thiệu bản thân:</strong> <span id="displayAbout"></span></p>
+        </div>
+    </main>
+
+    <footer>
+        <footer>
+            <p>Tên sinh viên: Nguyễn Hàm Thành</p>
+            <p>Email: thanhnh2202@gmail.com</p>
+            <p>Lớp: TH2409M</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
